@@ -21,7 +21,8 @@ try
     string response = await client.GetStringAsync(url);
 
     var weather = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(response);
-    Log.Information($"City: {weather!.name} || Temperature: {weather.main.temp} || Description: {weather.weather[0].description}");
+    Log.Information("City: {City} || Temperature: {Temp} || Description: {Description}",
+    (string)weather!.name, (double)weather.main.temp, (string)weather.weather[0].description);
 }
 catch (HttpRequestException e)
 {
