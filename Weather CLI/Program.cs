@@ -1,0 +1,1 @@
+﻿//A console app that fetches weather data, parses JSON with Newtonsoft.Json, and logs with Serilog.
